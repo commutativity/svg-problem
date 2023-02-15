@@ -14,8 +14,7 @@ object Main extends App {
 
   val conf: SparkConf = new SparkConf().setAppName("SparkTest").setMaster("local[*]").set("spark.executor.memory", "16g")
   val sparkContext = new SparkContext(conf)
-  val sparkSession: SparkSession = SparkSession.builder.config(sparkContext.getConf)
-    .config("spark.local.dir", "D://spark").getOrCreate()
+  val sparkSession: SparkSession = SparkSession.builder.config(sparkContext.getConf).getOrCreate()
   val sqlContext: SQLContext = sparkSession.sqlContext
 
 
