@@ -10,7 +10,7 @@ import java.io.PrintWriter
 import graph.JavaDriver
 
 
-object ReproduceError extends App {
+object Main extends App {
 
   val conf: SparkConf = new SparkConf().setAppName("SparkTest").setMaster("local[*]").set("spark.executor.memory", "16g")
   val sparkContext = new SparkContext(conf)
